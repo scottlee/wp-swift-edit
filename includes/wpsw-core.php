@@ -3,7 +3,7 @@
 namespace WPSW\Core;
 
 // Set the query param that will be used throughout.
-const QUERY_PARAM = 'sw';
+const QUERY_PARAM = 'se';
 
 /**
  * Set up function
