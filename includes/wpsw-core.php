@@ -39,27 +39,35 @@ function wp_swift_edit_params( $args ) {
 }
 
 /**
- * Redirect users to the edit post url if the query param has been set.
+ * Primary handler for redirecting the user to the post edit.
  *
  * @return void
  */
 function wp_swift_edit() {
 
-	/**
-	 * Only logged in users need apply.
-	 * OR
-	 * If the specific query param has been set.
-	 */
-	if ( ! is_user_logged_in() || ! isset( $_GET[ QUERY_PARAM ] ) ) {
+	// Has the specific query param been set?
+	if ( ! isset( $_GET[ QUERY_PARAM ] ) ) {
+		return;
+	}
+
+	// We're only interested in editing singles
+	if ( ! is_singular() ) {
 		return;
 	}
 
 	/**
-	 * Grab the edit post URL and redirect the user there.
+	 * We've made it this far, it's go time.
 	 *
-	 * @internal `get_edit_post_link` handles the `current_user_can` checks.
+	 * If we've got a postID redirect the user.
 	 */
-	if ( $edit_url = get_edit_post_link( get_the_ID(), null ) ) {
+	if ( $post_id = get_the_ID() ) {
+
+		/**
+		 * If the user is logged in already forward to the edit post link.
+		 * Otherwise send them to the login screen specifying the redirect_url param.
+		 */
+		$edit_url = ( is_user_logged_in() ) ? get_edit_post_link( $post_id, null ) : admin_url( "post.php?post=$post_id&action=edit" );
+
 		wp_safe_redirect( $edit_url );
 		exit;
 	}
