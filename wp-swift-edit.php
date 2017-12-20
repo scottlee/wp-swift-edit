@@ -12,17 +12,17 @@
 /**
  * Register some useful globals.
  */
-define( 'WPSE_VERSION', '0.1.0' );
-define( 'WPSE_URL', plugin_dir_url( __FILE__ ) );
-define( 'WPSE_PATH', dirname( __FILE__ ) . '/' );
-define( 'WPSE_INC', WPSE_PATH . 'includes/' );
+define( 'WP_SWIFT_EDIT_VERSION', '0.1.0' );
+define( 'WP_SWIFT_EDIT_URL', plugin_dir_url( __FILE__ ) );
+define( 'WP_SWIFT_EDIT_PATH', dirname( __FILE__ ) . '/' );
+define( 'WP_SWIFT_EDIT_INC', WP_SWIFT_EDIT_PATH . 'includes/' );
 
 /**
  * Includes
  */
-require_once WPSE_INC . 'wpsw-core.php';
+require_once WP_SWIFT_EDIT_INC . 'wpsw-core.php';
 
 /**
  * Light it up
  */
-WPSW\Core\setup();
+WP_SWIFT_EDIT\Core\setup();

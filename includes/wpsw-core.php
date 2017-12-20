@@ -1,6 +1,6 @@
 <?php
 
-namespace WPSW\Core;
+namespace WP_Swift_Edit\Core;
 
 // Set the query param that will be used throughout.
 const QUERY_PARAM = 'se';
