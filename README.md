@@ -1,6 +1,6 @@
 # WP Swift Edit
 
-WP Swift Edit allows user to swiftly navigate to the edit post screen based on the `?se` query param.
+WP Swift Edit allows authenticated users to swiftly navigate to the edit post screen of a post or page by appending `?se` to the URL.
 
 ## Usage
 

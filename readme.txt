@@ -2,7 +2,7 @@
 Contributors: scottlee
 Tags: editor, edit, developer
 Requires at least: 3.0
-Tested up to: 4.9.1
+Tested up to: 4.9.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -30,6 +30,11 @@ Usage:
 Install this plugin as described in the [Codex](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins)
 
 == Changelog ==
+
+= 1.1 =
+* Test with WordPress 4.9.8
+* Update `README.md` and plugin description.
+* Sync up the version number differences.
 
 = 1.0.0 =
 * Initial Release
