@@ -11,7 +11,7 @@ Swiftly navigate to the edit screen of any post, page, etc. by appending `?se` t
 
 == Description ==
 
-For all those times when you need to <del>quickly</del> swiftly edit the post or page you're viewing. Also helpful for sites that have the Admin bar hidden when signed in.
+For all those times when you need to quickly, nay, *swiftly* edit the post or page you're viewing. Also helpful for sites that have the Admin bar hidden when signed in.
 
 
 Features:
